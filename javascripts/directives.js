@@ -12,7 +12,13 @@
         return{
             restrict: 'AE',
             templateUrl:'partials/_outputResult.html',
-            controller: resultController /*check controllers.js for definition*/
+            controller: function($scope, httpFactory){
+                httpFactory.read().success(function(data){
+                    $scope.results = data["products"];
+                }).error(function(error){
+                    $scope.results = error;
+                });
+            }
         }
     }
 }());

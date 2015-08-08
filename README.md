@@ -7,6 +7,6 @@ Data file is also included in the repo.
 app.js : Initializing and setting an angular module
 All other js files access the module using the angular.module getter
 
-controllers.js: Collection of controllers in the application
+controllers.js: main controller in the application
 directives.js : Directive responsible for resolving the result set
 services.js: Service responsible for making the HTTP request
