@@ -1,0 +1,10 @@
+<h3>Results</h3>
+<!--User input is filtered on the go because of the angular filter set up on the searchText -->
+   <ul>
+       <!--ng-repeat called on the $scope.result -->
+       <li ng-repeat="result in results | filter:searchText">
+           <strong>{{result.name}}</strong><br/>
+           <small><a ng-href="{{result.url}}">{{result.url}}</a></small><br/>
+           <small>Type: {{result.type}}</small><br/>
+       </li>
+   </ul>
